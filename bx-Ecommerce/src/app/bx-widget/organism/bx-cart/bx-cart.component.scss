@@ -1,0 +1,37 @@
+
+.bx-content-wrapper{
+
+  max-width: 1536px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex ;
+  flex-direction: column;
+  
+}
+
+.bx-card-container{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.card {
+    width: 18rem; /* You can adjust the width as needed */
+    border: 1px solid #ddd; /* Add a border for the card */
+    border-radius: 8px; /* Rounded corners */
+    margin: 20px; /* Adjust margin as needed */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    &--row{
+        display: flex;
+        flex-direction: column;
+    }
+  }
+  .bx-cart-item{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+  }

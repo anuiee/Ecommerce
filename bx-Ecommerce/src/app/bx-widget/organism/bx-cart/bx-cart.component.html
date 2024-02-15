@@ -1,0 +1,10 @@
+<div class="bx-content-wrapper">
+<div class="bx-card-container">
+    <div class="bx-cart-item" *ngFor="let item of products ; index as i" > 
+    <app-bx-card [dynamicStyle]="customDivStyle" [dynamicFlexStyle]="customFlexStyle" [item]="item"></app-bx-card>
+    <button class="btn btn-primary" (click)="removeItem(item.id)">Remove Item</button>
+        
+    </div>
+      
+</div>
+</div>

@@ -1,0 +1,40 @@
+@import "../../../../assets/scss/base/color.scss";
+@import "../../../../assets/scss/base/mixins.scss";
+
+.bx-submit-btn{
+    display: flex;
+    background-color: $seablue;
+    color: $white;
+    border: none;
+    border-radius: 5px;
+    width: 400px;
+    height: 40px;
+    padding: 10px;
+    //margin-top: 160px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.bx-submit-btn:focus{
+    outline: none;
+}
+// .bx-buttonIcon{
+//     margin-top:-3;
+// }
+// @include mobile{
+//     .bx-submit-btn{
+//         display: flex;
+//         background-color: #0089B8;
+//         color: $white;
+//         border: none;
+//         width: 120px;
+//         height: 40px;
+//         padding: 10px;
+//         //margin-top: 160px;
+//         cursor: pointer;
+//         align-items: center;
+//         justify-content: space-around;
+        
+//     }
+// }

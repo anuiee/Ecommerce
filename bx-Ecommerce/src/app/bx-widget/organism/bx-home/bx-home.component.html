@@ -1,0 +1,40 @@
+<div class="bx-content-wrapper">
+<app-bx-carousel></app-bx-carousel>
+<div class="bx-filter">
+<div class="bx-form-container">
+  <select class="form-select" aria-label="Default select example" #searchInput>
+    <option selected>All</option>
+    <option value="electronics">Electronics</option>
+    <option value="men's clothing">Men's wear</option>
+    <option value="jewelery">Jewelery</option>
+  </select>
+  <button class=" btn btn-primary row-btn" (click)="submitSearch(searchInput.value); searchInput.value = ''">Search</button> 
+</div>
+</div>
+<div *ngIf="filteredProducts.length > 0; else noProducts">
+  <ul>
+  
+      <!--search item list-->
+      <div class="row search-item" *ngFor="let product of filteredProducts">
+        <div class="col-sm-3">
+          <a>  <img src="{{product.image}}" alt=""></a>
+        </div>
+        <div class="col-sm-8 details">
+            <h6><a>{{product.title}} </a></h6>
+            <p><b>Price:{{product.price}}</b></p>
+            <p><span>Category: {{product.category}}</span></p>
+            <p>{{product.description}}</p>
+        </div>
+    </div>
+    <!--search item list end-->
+
+  </ul>
+</div>
+
+<ng-template #noProducts>
+<div class="bx-card-container">
+    <div *ngFor="let item of jsonData ; index as i">
+        <app-bx-home-card [item]="item"></app-bx-home-card>
+      </div>
+</div></ng-template>
+</div>

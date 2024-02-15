@@ -1,0 +1,94 @@
+<div class="bx-content-wrapper">
+
+<!-- login form start     -->
+<div *ngIf="showLogin" class="bx-form-container">
+    <h2 class="be-form-h2">Login</h2>
+    <form [formGroup]="myForm" (ngSubmit)="onLoginSubmit(myForm.value)">
+        <p style="color: red;">{{authError}}</p>
+    <!-- row1 start -->
+            <div class="bx-form-container__row">
+                <app-bx-input
+                [type]="'email'"
+                [name]="'email'"
+                [control]="'email'"
+                [parentForm]="myForm"
+                [placeHolder]="'Your Email'"
+                ></app-bx-input>
+            </div>
+    <!-- row1 end-->   
+    <!-- row2 start--> 
+            <div class="bx-form-container__row">
+                <app-bx-input
+                [type]="'password'"
+                [name]="'password'"
+                [control]="'password'"
+                [parentForm]="myForm"
+                [placeHolder]="'Password'"
+                ></app-bx-input>
+            </div> 
+    <!-- row2end-->
+    <!-- login buuton   -->
+
+            <div class="bx-form-container__row">
+                <app-bx-button-submit
+                [btnText]="'Login'"
+                ></app-bx-button-submit>
+            </div>
+    <!-- login buuton   -->
+    </form> 
+<!-- loginform end -->
+    <p>Want to Create Account ? <a (click)="openSignUp()" >Click Here</a></p>      
+  
+    </div>  
+    
+<!-------------------------------------------------------------------------------->
+<!-- signup form start -->
+     <div *ngIf="!showLogin" class="bx-form-container">
+        <div class="bx-form-container__form">
+        <h2 class="be-form-h2">Sign Up</h2>
+        <form [formGroup]="myForm" (ngSubmit)="onSubmitSignUp()">
+<!--  row-1 -->
+            <div class="bx-form-container__row">
+                <app-bx-input
+                [type]="'text'"
+                [name]="'name'"
+                [control]="'name'"
+                [parentForm]="mySignupForm"
+                [placeHolder]="'Your Name'"
+                ></app-bx-input>
+            </div>
+<!-- row2  -->
+            <div class="bx-form-container__row">
+                <app-bx-input
+                [type]="'email'"
+                [name]="'email'"
+                [control]="'email'"
+                [parentForm]="mySignupForm"
+                [placeHolder]="'Your Email Id'"
+                ></app-bx-input>
+            </div>
+ <!-- row3-->
+            <div class="bx-form-container__row">
+                    <app-bx-input
+                    [type]="'password'"
+                    [name]="'password'"
+                    [control]="'password'"
+                    [parentForm]="mySignupForm"
+                    [placeHolder]="'Password'"
+                    ></app-bx-input>
+            
+            </div> 
+<!-- signup button -->
+            <div class="bx-form-container__row">
+                    <app-bx-button-submit
+                    [btnText]="'Sign Up'"
+                    ></app-bx-button-submit>
+            </div>
+        </form>
+<!-- signup form end -->
+        <p>Aleady have an Account ? <a (click)="openLogin()" >Click Here</a></p>      
+        </div>       
+        </div>  
+</div>   
+     
+

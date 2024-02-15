@@ -1,0 +1,13 @@
+
+<div class="row search-item" >
+  <div class="col-sm-3">
+    <a>  <img src="{{productDetails.image}}" alt="image"></a>
+  </div>
+  <div class="col-sm-8 details">
+      <h6>  <a > {{productDetails.title}} </a></h6>
+      <p><b>Price:{{productDetails.price}}</b></p>
+      <p><span>Category: {{productDetails.category}}</span></p>
+      <p>{{productDetails.description}}</p>
+  </div>
+  <button class="btn btn-primary" (click)="addToCart()">Add to Cart</button>
+</div>

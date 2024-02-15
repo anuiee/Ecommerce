@@ -1,0 +1,17 @@
+.bx-submit-btn {
+  display: flex;
+  background-color: #0089B8;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  width: 400px;
+  height: 40px;
+  padding: 10px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.bx-submit-btn:focus {
+  outline: none;
+}/*# sourceMappingURL=bx-button-submit.component.css.map */

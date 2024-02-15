@@ -1,0 +1,14 @@
+<div class="card" [ngStyle]="dynamicFlexStyle">
+  <div><img [src]="item.image" class="card-img-top" alt="Item Image"></div>
+  <div class="card-body">
+    <h5 class="card-title">{{ item.title }}</h5>
+    <p class="card-para-text">{{ item.description }}</p>
+    <p class="card-text">Price: {{ item.price }}</p>
+    <div class="bx-card-button">
+    <button class="btn btn-primary"  [ngStyle]="dynamicStyle" (click)="addToCart()">Add to Cart</button>
+    <!-- <button class="btn btn-primary">Buy Now</button> -->
+    </div>
+    <!-- <button class="btn btn-primary" (click)="removeItem(item.id)" [ngStyle]="removeButton">Remove</button> -->
+  </div>
+</div>
+

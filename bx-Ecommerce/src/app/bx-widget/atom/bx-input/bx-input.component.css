@@ -1,0 +1,10 @@
+.bx-input {
+  width: 400px;
+  height: 35px;
+  border: none;
+  border-radius: 10px;
+}
+
+.bx-input:focus {
+  outline: none;
+}/*# sourceMappingURL=bx-input.component.css.map */

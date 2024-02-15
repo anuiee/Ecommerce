@@ -1,0 +1,47 @@
+<div class="bx-content-wrapper">
+    <div class="bx-form-container">
+    <h2 class="be-form-h2">Edit Your Profile</h2>
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm.value)">
+<!--  row-1 -->
+        <div class="bx-form-container__row">
+            <app-bx-input
+            [type]="'text'"
+            [name]="'name'"
+            [control]="'name'"
+            [parentForm]="myForm"
+            [placeHolder]="'Your Name'"
+            ></app-bx-input>
+        </div>
+<!-- row2  -->
+        <div class="bx-form-container__row">
+            <app-bx-input
+            [type]="'email'"
+            [name]="'email'"
+            [control]="'email'"
+            [parentForm]="myForm"
+            [placeHolder]="'Your Email Id'"
+            ></app-bx-input>
+        </div>
+<!-- row3-->
+        <div class="bx-form-container__row">
+                <app-bx-input
+                [type]="'password'"
+                [name]="'password'"
+                [control]="'password'"
+                [parentForm]="myForm"
+                [placeHolder]="'Password'"
+                ></app-bx-input>
+        
+        </div> 
+<!-- signup button -->
+        <div class="bx-form-container__row">
+                <app-bx-button-submit
+                [btnText]="'Submit'"
+                ></app-bx-button-submit>
+        </div>
+    </form>
+<!-- signup form end -->
+      
+    </div>       
+</div>  
+
